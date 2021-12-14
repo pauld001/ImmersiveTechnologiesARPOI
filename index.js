@@ -31,13 +31,19 @@ AFRAME.registerComponent("dynamic-content", {
         const north = gpspos.coords.latitude + 0.05
         console.log(`west: ${west}, south: ${south}, east: ${east}, north: ${north}`);
 
-        const response = await fetch(`https://hikar.org/webapp/map/all?bbox=${west},${south},${east},${north}`);
-        console.log('fetched')
+        const response = await fetch(`https://hikar.org/webapp/map/all?bbox=${west},${south},${east},${north}`)
         const parsedJson = await response.json();
-        parsedJson.response.array.forEach( features => {
-        console.log(`name: ${features.properties.name}`);
+        console.log('output')
+        console.log(parsedJson);
+            parsedJson.features.forEach(feature => {
+            
+            console.log(`name: ${feature.properties.name},${feature.geometry.coordinates}`);
+           
 
-    });  
+        });  
+    
 
-    });    
+
+
+        });    
 }});
