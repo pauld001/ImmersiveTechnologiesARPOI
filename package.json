@@ -17,6 +17,15 @@
   },
   "homepage": "https://github.com/pauld001/ImmersiveTechnologiesARPOI#readme",
   "dependencies": {
-    "aframe": "^1.2.0"
+    "@ar-js-org/ar.js": "^3.3.2-es6-beta-01",
+    "aframe": "^1.2.0",
+    "aframe-look-at-component": "^1.0.0",
+     "aframe-osm-3d": "^0.5.2",
+    "jsfreemaplib": "^0.4.3",
+    "three.js": "^0.77.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
   }
 }
