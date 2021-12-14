@@ -5,6 +5,7 @@ import { GoogleProjection } from 'jsfreemaplib';
 
 AFRAME.registerComponent("poi", {
     init: function () {
+       
         console.log('working');
         // google projection
         navigator.geolocation.getCurrentPosition(async (gpspos) => {
@@ -41,12 +42,14 @@ AFRAME.registerComponent("poi", {
                 const point = document.createElement('a-entity')
                 point.setAttribute('geometry', { primitive: 'box' });
                 point.setAttribute('material', { color: 'blue' });
+                point.setAttribute('scale',{x:100, y:100, z:100})
                 const [entlat, entlon] = location.project(feature.geometry.coordinates[0], feature.geometry.coordinates[1])
                 point.setAttribute('position', {
                     x: entlat,
                     y: 0,
                     z: -entlon
                 });
+                this.el.sceneEl.appendChild(point);
                 console.log(`entlat: ${entlat}, entlon: ${entlon}`);
             });
 
