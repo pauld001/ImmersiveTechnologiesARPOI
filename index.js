@@ -5,14 +5,16 @@ import { GoogleProjection } from 'jsfreemaplib';
 
 AFRAME.registerComponent("poi", {
     init: function () {
-        this.loaded = false;
+             console.log('working');
+             this.loaded = false;
         window.addEventListener('gps-camera-update-position', e =>{
             if(this.loaded === false) {
                 this.loaded = true;
-                console.log(`your initial location is: ${e.detail.position.longitude} ${e.detail.position.latitude}`);
-            }
+            }                
+            console.log(`your initial location is: ${e.detail.position.longitude} ${e.detail.position.latitude}`);
+
         })
-        console.log('working');
+   
         // google projection
         navigator.geolocation.getCurrentPosition(async (gpspos) => {
             const location = new GoogleProjection();
@@ -32,9 +34,9 @@ AFRAME.registerComponent("poi", {
             });
 
             const west = gpspos.coords.longitude - 0.05
-            const south = gpspos.coords.latitude - 0.05
+            const south = gpspos.coords.latitude - 0.02
             const east = gpspos.coords.longitude + 0.05
-            const north = gpspos.coords.latitude + 0.05
+            const north = gpspos.coords.latitude + 0.02
             console.log(`west: ${west}, south: ${south}, east: ${east}, north: ${north}`);
 
             const response = await fetch(`https://hikar.org/webapp/map/all?bbox=${west},${south},${east},${north}`)
@@ -46,16 +48,34 @@ AFRAME.registerComponent("poi", {
                 console.log(`name: ${feature.properties.name},${feature.geometry.coordinates}`);
 
                 const point = document.createElement('a-entity')
+                const text = document.createElement('a-entity')
+                //TEST NO MODEL
                 point.setAttribute('geometry', { primitive: 'box' });
                 point.setAttribute('material', { color: 'blue' });
-                point.setAttribute('scale',{x:100, y:100, z:100})
+                //POINTER MODEL
+                
+                point.setAttribute('scale',{x:30, y:30, z:30})
+                //point.setAttribute('text', {value: 'point'});
+                text.setAttribute('text',{ value: `${feature.properties.name}`})
+               /// text.setAttribute('look-at',{}) 
+                text.setAttribute('scale',{x:200, y:200, z:200});                
+                
                 const [entlat, entlon] = location.project(feature.geometry.coordinates[0], feature.geometry.coordinates[1])
+
                 point.setAttribute('position', {
                     x: entlat,
                     y: 0,
                     z: -entlon
                 });
+                text.setAttribute('position', {
+                    x: entlat,
+                    y: 0,
+                    z: -entlon
+                });
+                
+                
                 this.el.sceneEl.appendChild(point);
+                this.el.sceneEl.appendChild(text);
                 console.log(`entlat: ${entlat}, entlon: ${entlon}`);
             });
 
