@@ -5,7 +5,13 @@ import { GoogleProjection } from 'jsfreemaplib';
 
 AFRAME.registerComponent("poi", {
     init: function () {
-       
+        this.loaded = false;
+        window.addEventListener('gps-camera-update-position', e =>{
+            if(this.loaded === false) {
+                this.loaded = true;
+                console.log(`your initial location is: ${e.detail.position.longitude} ${e.detail.position.latitude}`);
+            }
+        })
         console.log('working');
         // google projection
         navigator.geolocation.getCurrentPosition(async (gpspos) => {
