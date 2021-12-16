@@ -53,7 +53,7 @@ AFRAME.registerComponent("poi", {
                 //point.setAttribute('geometry', { primitive: 'box' });
                 //point.setAttribute('material', { color: 'blue' });
                 //POINTER MODEL
-                point.setAttribute('gltf-model','#pointer')
+                point.setAttribute('gltf-model',{src: 'models\map_pointer\scene.gltf'})
                 point.setAttribute('scale',{x:100, y:100, z:100})
                 //point.setAttribute('text', {value: 'point'});
                 text.setAttribute('text',{ value: `${feature.properties.name}`})
