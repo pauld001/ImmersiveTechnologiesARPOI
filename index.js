@@ -54,7 +54,7 @@ AFRAME.registerComponent("poi", {
                 //point.setAttribute('material', { color: 'blue' });
                 //POINTER MODEL
                 point.setAttribute('obj-model','#pointer')
-                point.setAttribute('scale',{x:10, y:10, z:10})
+                point.setAttribute('scale',{x:100, y:100, z:100})
                 //point.setAttribute('text', {value: 'point'});
                 text.setAttribute('text',{ value: `${feature.properties.name}`})
                /// text.setAttribute('look-at',{}) 
