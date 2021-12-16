@@ -50,15 +50,15 @@ AFRAME.registerComponent("poi", {
                 const point = document.createElement('a-entity')
                 const text = document.createElement('a-entity')
                 //TEST NO MODEL
-                point.setAttribute('geometry', { primitive: 'box' });
-                point.setAttribute('material', { color: 'blue' });
+                //point.setAttribute('geometry', { primitive: 'box' });
+                //point.setAttribute('material', { color: 'blue' });
                 //POINTER MODEL
-                
-                point.setAttribute('scale',{x:10, y:10, z:1S0})
+                point.setAttribute('obj-model','#pointer')
+                point.setAttribute('scale',{x:10, y:10, z:10})
                 //point.setAttribute('text', {value: 'point'});
                 text.setAttribute('text',{ value: `${feature.properties.name}`})
                /// text.setAttribute('look-at',{}) 
-                text.setAttribute('scale',{x:200, y:200, z:200});                
+                text.setAttribute('scale',{x:100, y:100, z:100});                
                 
                 const [entlat, entlon] = location.project(feature.geometry.coordinates[0], feature.geometry.coordinates[1])
 
