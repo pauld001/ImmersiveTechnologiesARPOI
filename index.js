@@ -2,7 +2,7 @@ import 'aframe';
 import '@ar-js-org/ar.js';
 import 'aframe-look-at-component';
 import { GoogleProjection } from 'jsfreemaplib';
-
+import 'three.js'
 AFRAME.registerComponent("poi", {
     init: function () {
              console.log('working');
