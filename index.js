@@ -5,16 +5,16 @@ import { GoogleProjection } from 'jsfreemaplib';
 import 'three.js'
 AFRAME.registerComponent("poi", {
     init: function () {
-             console.log('working');
-             this.loaded = false;
-        window.addEventListener('gps-camera-update-position', e =>{
-            if(this.loaded === false) {
+        console.log('working');
+        this.loaded = false;
+        window.addEventListener('gps-camera-update-position', e => {
+            if (this.loaded === false) {
                 this.loaded = true;
-            }                
+            }
             console.log(`your initial location is: ${e.detail.position.longitude} ${e.detail.position.latitude}`);
 
         })
-   
+
         // google projection
         navigator.geolocation.getCurrentPosition(async (gpspos) => {
             const location = new GoogleProjection();
@@ -53,13 +53,21 @@ AFRAME.registerComponent("poi", {
                 //point.setAttribute('geometry', { primitive: 'box' });
                 //point.setAttribute('material', { color: 'blue' });
                 //POINTER MODEL
-                point.setAttribute('gltf-model', '#pointer');
-                point.setAttribute('scale',{x:50, y:50, z:50})
+
+                if (`${feature.properties.amenity}` === "cafe") {
+                    console.log("cafe")
+                    point.setAttribute('gltf-model', '#pointer');
+
+                } else {
+                    console.log("not cafe")
+                    point.setAttribute('gltf-model', '#pointer');
+                }
+                point.setAttribute('scale', { x: 50, y: 50, z: 50 })
                 //point.setAttribute('text', {value: 'point'});
-                text.setAttribute('text',{ value: `${feature.properties.name}`})
-               /// text.setAttribute('look-at',{}) 
-                text.setAttribute('scale',{x:100, y:100, z:100});                
-                
+                text.setAttribute('text', { value: `${feature.properties.name}` })
+                /// text.setAttribute('look-at',{}) 
+                text.setAttribute('scale', { x: 100, y: 100, z: 100 });
+
                 const [entlat, entlon] = location.project(feature.geometry.coordinates[0], feature.geometry.coordinates[1])
 
                 point.setAttribute('position', {
@@ -69,11 +77,11 @@ AFRAME.registerComponent("poi", {
                 });
                 text.setAttribute('position', {
                     x: entlat,
-                    y: 0,
+                    y: 0.2,
                     z: -entlon
                 });
-                
-                
+
+
                 this.el.sceneEl.appendChild(point);
                 this.el.sceneEl.appendChild(text);
                 console.log(`entlat: ${entlat}, entlon: ${entlon}`);

@@ -1,0 +1,446 @@
+{
+  "accessors": [
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 898,
+      "max": [
+        1.5521727800369263,
+        2.2375271320343018,
+        1.5521727800369263
+      ],
+      "min": [
+        -1.5521727800369263,
+        -2.2375271320343018,
+        -1.5521727800369263
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 10776,
+      "componentType": 5126,
+      "count": 898,
+      "max": [
+        0.99456042051315308,
+        1,
+        0.99456042051315308
+      ],
+      "min": [
+        -0.99456042051315308,
+        -1,
+        -0.99456042051315308
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 5376,
+      "max": [
+        897
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 21552,
+      "componentType": 5126,
+      "count": 1680,
+      "max": [
+        0.97813904285430908,
+        0.42822521924972534,
+        0.97813910245895386
+      ],
+      "min": [
+        -0.97813904285430908,
+        0.015947990119457245,
+        -0.97813904285430908
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 41712,
+      "componentType": 5126,
+      "count": 1680,
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 21504,
+      "componentType": 5125,
+      "count": 9600,
+      "max": [
+        1679
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 61872,
+      "componentType": 5126,
+      "count": 384,
+      "max": [
+        1.4139847755432129,
+        3.2974424362182617,
+        1.4139847755432129
+      ],
+      "min": [
+        -1.4139847755432129,
+        1.1802965402603149,
+        -1.4139847755432129
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 66480,
+      "componentType": 5126,
+      "count": 384,
+      "max": [
+        0.99413681030273438,
+        0.76558393239974976,
+        0.99413681030273438
+      ],
+      "min": [
+        -0.99413681030273438,
+        -0.72565823793411255,
+        -0.99413681030273438
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 59904,
+      "componentType": 5125,
+      "count": 2304,
+      "max": [
+        383
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "David Zerba (https://sketchfab.com/DavidZerba)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/coffee-shop-cup-37e6805f2b7a4158a1d61fe75f8e2a33",
+      "title": "Coffee Shop Cup"
+    },
+    "generator": "Sketchfab-6.9.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 69120,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 71088,
+      "byteOffset": 69120,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 140208,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "material",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.92135604697753393,
+          0.13979881313784057,
+          0.13979881313784057,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 1
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "material_1",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.80000000000000004,
+          0.80000000000000004,
+          0.80000000000000004,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "Sleeve",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          0.87327835830456579,
+          0.56123881032159872,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 1
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0
+          },
+          "indices": 2,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 4,
+            "POSITION": 3
+          },
+          "indices": 5,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 7,
+            "POSITION": 6
+          },
+          "indices": 8,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "root"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        2.2204460492503131e-16,
+        1,
+        0,
+        0,
+        -1,
+        2.2204460492503131e-16,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "GLTF_SceneRootNode"
+    },
+    {
+      "children": [
+        5,
+        7,
+        9
+      ],
+      "matrix": [
+        1.5733212232589722,
+        0,
+        0,
+        0,
+        0,
+        2.4385054111480713,
+        0,
+        0,
+        0,
+        0,
+        1.5733212232589722,
+        0,
+        0,
+        2.4388115406036377,
+        0,
+        1
+      ],
+      "name": "Coffe Cup_Parent_3"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        0.63559812307357788,
+        0,
+        0,
+        0,
+        0,
+        0.41008725762367249,
+        0,
+        0,
+        0,
+        0,
+        0.63559812307357788,
+        0,
+        -0.00084700732259079814,
+        -0.082544147968292236,
+        0,
+        1
+      ],
+      "name": "Cup_0"
+    },
+    {
+      "mesh": 0,
+      "name": ""
+    },
+    {
+      "children": [
+        8
+      ],
+      "matrix": [
+        -8.7315798753308481e-08,
+        0,
+        1.0358520746231044,
+        0,
+        -0,
+        0.62782996892929077,
+        0,
+        0,
+        -1.0358520746231044,
+        0,
+        -8.7315798753308481e-08,
+        0,
+        0,
+        0.72435605525970459,
+        -0.00084700726438313723,
+        1
+      ],
+      "name": "Lid_1"
+    },
+    {
+      "mesh": 1,
+      "name": ""
+    },
+    {
+      "children": [
+        10
+      ],
+      "matrix": [
+        0.63559812307357788,
+        0,
+        0,
+        0,
+        0,
+        0.41008725762367249,
+        0,
+        0,
+        0,
+        0,
+        0.63559812307357788,
+        0,
+        -0.00084700732259079814,
+        -1.000125527381897,
+        0,
+        1
+      ],
+      "name": "Sleeve_2"
+    },
+    {
+      "mesh": 2,
+      "name": ""
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
+
