@@ -23,7 +23,7 @@ AFRAME.registerComponent("poi", {
             console.log(`Lat ${gpspos.coords.latitude} Lon ${gpspos.coords.longitude}`)
         
             
-               
+            document.getElementById('info').innerHTML = (`Current Location: Lat ${gpspos.coords.latitude} Lon ${gpspos.coords.longitude}`)
             
             
             const location = new GoogleProjection();
