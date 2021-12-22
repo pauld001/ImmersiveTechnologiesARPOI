@@ -37,9 +37,9 @@ AFRAME.registerComponent("poi", {
 
 
             document.querySelector("[camera]").setAttribute("position", {
-                x: projected[0],
+                x: mercatorEasting,
                 y: 0,
-                z: -projected[1]
+                z: -mercatorNorthing
             });
 
             const west = gpspos.coords.longitude - 0.05
