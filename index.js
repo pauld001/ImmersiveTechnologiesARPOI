@@ -56,10 +56,18 @@ AFRAME.registerComponent("poi", {
 
                 if (`${feature.properties.amenity}` === "cafe") {
                     console.log("cafe")
-                    point.setAttribute('gltf-model', '#pointer');
+                    point.setAttribute('gltf-model', '#cafe');
 
-                } else {
-                    console.log("not cafe")
+                }else if(`${feature.properties.amenity}` === "restaurant") {
+                    console.log("restaurant")
+                    point.setAttribute('gltf-model', '#restaurant');
+
+                }else if(`${feature.properties.amenity}` === "pub") {
+                    console.log("restaurant")
+                    point.setAttribute('gltf-model', '#pub');
+                
+                }else {
+                    console.log("other")
                     point.setAttribute('gltf-model', '#pointer');
                 }
                 point.setAttribute('scale', { x: 50, y: 50, z: 50 })
