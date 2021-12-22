@@ -13,7 +13,9 @@
 
     <!-- <a-scene poi cursor='rayOrigin: mouse' raycaster='near:0.1; far: 10000'>-->
     <a-scene poi vr-mode-ui="enabled:false" arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'
-        render='antialias: true; alpha: true' raycaster='near:0.1; far: 10000'></a-scene>
+        render='antialias: true; alpha: true' raycaster='near:0.1; far: 10000'>
+        <a-box gps-projected-entity-place='latitude: near-your-lat; longitude: near-your-lon' material='color: red' scale='10 10 10'></a-box>
+
     <a-assets>
         <a-asset-item src='models/map_pointer/scene.gltf' id="pointer"></a-asset-item>
         <!-- title:	Map Pointer
