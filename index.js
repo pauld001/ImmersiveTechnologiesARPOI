@@ -16,7 +16,7 @@ AFRAME.registerComponent("poi", {
         })
 
         // google projection
-        navigator.geolocation.watchPosition( 
+        navigator.geolocation.getCurrentPosition( 
             
         
             async(gpspos) => {
