@@ -107,10 +107,10 @@ AFRAME.registerComponent("poi", {
 
 
 
-    },
-    {
-        enableHighAccuracy:true, 
-        maximumAge: 2000 
+    //},
+   // {
+   //     enableHighAccuracy:true, 
+   //     maximumAge: 2000 
     });
     }
 });
