@@ -3,6 +3,7 @@ import '@ar-js-org/ar.js';
 import 'aframe-look-at-component';
 import { GoogleProjection } from 'jsfreemaplib';
 import 'three.js'
+
 AFRAME.registerComponent("poi", {
     init: function () {
         console.log('working');
@@ -11,12 +12,20 @@ AFRAME.registerComponent("poi", {
             if (this.loaded === false) {
                 this.loaded = true;
             }
-            console.log(`your initial location is: ${e.detail.position.longitude} ${e.detail.position.latitude}`);
 
         })
 
         // google projection
-        navigator.geolocation.getCurrentPosition(async (gpspos) => {
+        navigator.geolocation.watchPosition( 
+            
+        
+            async(gpspos) => {
+            console.log(`Lat ${gpspos.coords.latitude} Lon ${gpspos.coords.longitude}`)
+        
+            
+               
+            
+            
             const location = new GoogleProjection();
             //long lat gps
             console.log(`long:${gpspos.coords.longitude},lat:${gpspos.coords.latitude}`)
@@ -93,11 +102,15 @@ AFRAME.registerComponent("poi", {
                 this.el.sceneEl.appendChild(point);
                 this.el.sceneEl.appendChild(text);
                 console.log(`entlat: ${entlat}, entlon: ${entlon}`);
-            });
+              });
 
 
 
 
-        });
+    },
+    {
+        enableHighAccuracy:true, 
+        maximumAge: 2000 
+    });
     }
 });
