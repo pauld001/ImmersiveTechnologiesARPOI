@@ -11,13 +11,11 @@
 
 <body> 
     
-
-
-
     <div id="scene" style="position: relative;">
-    <!-- <a-scene poi cursor='rayOrigin: mouse' raycaster='near:0.1; far: 10000'>-->
-    <a-scene poi vr-mode-ui="enabled:false" arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'
-        render='antialias: true; alpha: true' raycaster='near:0.1; far: 10000'>
+    <a-scene poi vr-mode-ui="enabled:false" 
+        arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: true;'
+        render='antialias: true; alpha: true' 
+        raycaster='near:0.1; far: 10000'>
 
     <a-assets>
         <a-asset-item src='models/map_pointer/scene.gltf' id="pointer"></a-asset-item>
@@ -41,16 +39,15 @@
         author:	kabj https://sketchfab.com/kai-raiser -->
 
     </a-assets>
-    <!--  <a-entity gltf-model="#pointer"></a-entity>-->
     </a-scene>
     </div>
   
 
 
-<div id="infobox" style="position: absolute; top: 0; left: 0; height: 50px;">
-    <p id='info'></p>
-</div>
-   
+    <div id="infobox" style="position: absolute; top: 0; left: 0; height: 50px;">
+        <p id='info'></p>
+    </div>
+    
 
 
 
