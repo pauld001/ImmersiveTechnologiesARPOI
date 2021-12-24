@@ -83,7 +83,7 @@ AFRAME.registerComponent("poi", {
                         console.log("other")
                         point.setAttribute('gltf-model', '#pointer');
                     }
-                    point.setAttribute('scale', { x: 40, y: 40, z: 40 })
+                    point.setAttribute('scale', { x: 30, y: 30, z: 30})
                     text.setAttribute('text', { value: `${feature.properties.name}` })
                     text.setAttribute('scale', { x: 100, y: 100, z: 100 });
 
