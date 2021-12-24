@@ -76,7 +76,7 @@ AFRAME.registerComponent("poi", {
                         point.setAttribute('gltf-model', '#restaurant');
 
                     } else if (`${feature.properties.amenity}` === "pub") {
-                        console.log("restaurant")
+                        console.log("pub")
                         point.setAttribute('gltf-model', '#pub');
 
                     } else {
